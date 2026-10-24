@@ -11,8 +11,8 @@ google-genai
 
 # --- Option A: local Qwen2.5-7B (needs an NVIDIA GPU, e.g. a Kaggle T4) ---
 # On Kaggle, torch is already installed.
-To run the local model:
-torch
-transformers
-accelerate
-bitsandbytes
+# To run the local model uncomment the following lines:
+#torch
+#transformers
+#accelerate
+#bitsandbytes
