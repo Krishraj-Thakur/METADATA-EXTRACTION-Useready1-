@@ -2,17 +2,14 @@
 python-docx
 easyocr
 pandas
-fastapi
-uvicorn[standard]
-python-multipart
 
 # --- Option B: Gemini API (no GPU needed) ---
 google-genai
 
 # --- Option A: local Qwen2.5-7B (needs an NVIDIA GPU, e.g. a Kaggle T4) ---
 # On Kaggle, torch is already installed.
-# To run the local model uncomment the following lines:
-#torch
-#transformers
-#accelerate
-#bitsandbytes
+# Uncomment the lines below if you want to run the local model:
+# torch
+# transformers
+# accelerate
+# bitsandbytes
