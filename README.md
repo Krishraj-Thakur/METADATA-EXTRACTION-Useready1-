@@ -72,25 +72,6 @@ Exact-match recall per field. **Train** = leave-one-out on the 9 usable training
 - **Some labelled end dates are not valid dates** (`31.11.2009`, `31.04.2011`, `31.02.2011`) and some labels contain typos relative to the document (`GERALDINE Q.` where the text reads `O.`, `Ingles,` vs `Ingles.`, `.B.Kishore`). Dates are therefore kept as plain text and never run through a date parser, and exact-match scores on these cannot reach 100%.
 - Test files named `*.pdf.docx` are matched to the CSV by removing the extra `.pdf`.
 
----
-
-## Repository layout
-
-```
-README.md
-requirements.txt
-notebook.ipynb                       # full pipeline: reading, both models, evaluation, test predictions
-app.py                               # REST API (FastAPI)
-shots.json                           # few-shot examples used by the API (exported from the notebook)
-predictions/
-  predictions_gemini_3.8.csv         # test-set predictions, Gemini 3.8 Flash
-  predictions_qwen2.5-7b.csv         # test-set predictions, Qwen2.5-7B
-```
-
-The dataset is **not** included. Put the `data/` folder (with `train.csv`, `test.csv`, `train/`, `test/`) anywhere and set `DATA` at the top of the notebook.
-
----
-
 ## Reproducing the predictions
 
 ### On Kaggle (what I used)
