@@ -29,10 +29,8 @@ An AI system that reads a rental agreement, either a **scanned image (.png)** or
 2. **Text to fields.** A language model gets a system prompt (output keys, date format, how to treat names, notice periods and end dates), two worked examples from the training set (few-shot), and the document text. It answers with a JSON object. Decoding is deterministic (`temperature 0` / greedy).
 3. **Evaluation.** Exact-match recall per field, as defined in the assignment.
 
-### Why few-shot prompting and not fine-tuning or RAG
+### Why few-shot prompting and not fine-tuning
 - The training set has only 10 labelled documents, which is far too few to fine-tune a model without overfitting. They work much better as prompt examples and as a validation set.
-- This is not a RAG problem: each agreement is short enough to fit in the model's context entirely, so there is nothing to retrieve.
-
 ### Two models, same pipeline
 | Option | Model | Needs |
 |---|---|---|
